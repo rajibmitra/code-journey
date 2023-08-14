@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>{{ topic.name }}</h2>
+  <h3>Problems:</h3>
+  <ul>
+    {% for problem in topic.problems.all %}
+      <li><a href="{{ problem.link }}">{{ problem.name }}</a>: {{ problem.description }}</li>
+    {% endfor %}
+  </ul>
+  <h3>Subtopics:</h3>
+  <ul>
+    {% for child in topic.children.all %}
+      <li><a href="{% url 'topic_detail' child.id %}">{{ child.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

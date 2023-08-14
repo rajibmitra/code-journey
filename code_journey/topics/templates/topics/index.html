@@ -1,0 +1,6 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>My LeetCode Journey</h1>
+  <h2><a href="{% url 'topic_detail' root_topic.id %}">{{ root_topic.name }}</a></h2>
+{% endblock %}
