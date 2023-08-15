@@ -18,8 +18,8 @@ This Django-based web application provides a visual representation of a user's p
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/rajibmitra/leetcode-journey.git
-   cd leetcode-journey
+   git clone https://github.com/rajibmitra/code-journey.git
+   cd code-journey/code-journey
    ```
 
 2. **Set Up a Virtual Environment**:
