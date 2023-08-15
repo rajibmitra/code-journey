@@ -11,4 +11,10 @@ def topic_detail(request, topic_id):
     return render(request, 'topics/topic_detail.html', {'topic': topic})
 
 def home(request):
-    return HttpResponse("Welcome to my LeetCode journey!")
+    topics_tree = {
+        'name': 'Arrays',
+        'left': {'name': 'Two Pointers'},
+        'right': {'name': 'Stack'}
+    }
+    return render(request, 'home.html', {'topics_tree': topics_tree})
+

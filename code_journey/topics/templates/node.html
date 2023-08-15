@@ -1,0 +1,12 @@
+<!-- node.html -->
+<ul>
+    <li>
+        {{ node.name }}
+        {% if node.left %}
+            {% include 'node.html' with node=node.left %}
+        {% endif %}
+        {% if node.right %}
+            {% include 'node.html' with node=node.right %}
+        {% endif %}
+    </li>
+</ul>
